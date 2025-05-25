@@ -38,7 +38,7 @@ public class AnalyticsDashboardController {
 
     @FXML
     public void initialize() {
-        // ✅ Fetch student data from PostgreSQL
+
         try (Connection conn = DatabaseConnector.connect();
              var stmt = conn.createStatement();
              var rs = stmt.executeQuery("SELECT name, progress FROM students")) {
@@ -53,13 +53,13 @@ public class AnalyticsDashboardController {
             e.printStackTrace();
         }
 
-        // ✅ Set pagination after fetching data
+
         int pageCount = (int) Math.ceil((double) studentList.size() / itemsPerPage);
         pagination.setPageCount(pageCount);
         pagination.setPageFactory(this::createPage);
     }
 
-    // ✅ Inner class to represent student records
+
     public static class Student {
         String name;
         double progress;
@@ -84,7 +84,7 @@ public class AnalyticsDashboardController {
 
             ProgressIndicator progressIndicator = new ProgressIndicator(s.progress);
 
-            // Start Course button with effects
+
             Button startButton = new Button("Start Course");
             startButton.setStyle("-fx-font-size: 12;");
 
