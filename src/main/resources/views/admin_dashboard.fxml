@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600" prefWidth="800"
+            style="-fx-background-image: url('/com/example/learning_management_system/css/background.jpg');
+                   -fx-background-size: cover;
+                   -fx-background-position: center;
+                   -fx-background-repeat: no-repeat;
+                   -fx-background-color: rgba(233, 242, 250, 0.85);"
+            stylesheets="@../com/example/learning_management_system/css/style.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learning_management_system.controllers.AdminDashboardController">
+
+    <top>
+        <MenuBar style="-fx-background-color: linear-gradient(to right, #2a7b4e, #3da569);
+                         -fx-background-radius: 0 0 12 12;
+                         -fx-padding: 8 12;
+                         -fx-effect: dropshadow(gaussian, rgba(0, 80, 0, 0.15), 8, 0, 0, 2);">
+            <Menu text="File">
+                <MenuItem onAction="#handleLogout" text="Logout" />
+                <MenuItem onAction="#handleExit" text="Exit" />
+            </Menu>
+            <Menu text="Manage">
+                <MenuItem onAction="#handleManageCourses" text="Courses" />
+                <MenuItem onAction="#handleManageStudents" text="Students" />
+                <MenuItem onAction="#handleManageEnrollments" text="Enrollments" />
+                <MenuItem onAction="#handleViewAnalytics" text="View Analytics" />
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <Label fx:id="welcomeLabel"
+               style="-fx-font-size: 24px;
+                      -fx-font-weight: 700;
+                      -fx-text-fill: #1a3c5e;
+                      -fx-padding: 20;
+                      -fx-background-color: rgba(255, 255, 255, 0.9);
+                      -fx-background-radius: 8;
+                      -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 6, 0, 0, 2);"
+               text="Welcome to the Learning Management System Admin!" />
+    </center>
+</BorderPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" prefHeight="600" prefWidth="800" spacing="15"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.learning_management_system.controllers.EnrollmentManagementController"
+      style="-fx-background-color: linear-gradient(to bottom right, #f0f8ff, #e6f7ff);
+             -fx-padding: 20;
+             -fx-font-family: 'Segoe UI', sans-serif;"
+      stylesheets="@../com/example/learning_management_system/css/style.css">
+
+
+    <Label text="Enroll Student in Course"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2e8b57;" />
+
+
+    <ComboBox fx:id="studentComboBox"
+              prefWidth="300"
+              promptText="Select Student"
+              style="-fx-background-radius: 8; -fx-font-size: 14px;" />
+
+    <ComboBox fx:id="courseComboBox"
+              prefWidth="300"
+              promptText=" Select Course"
+              style="-fx-background-radius: 8; -fx-font-size: 14px;" />
+
+
+    <Button text=" Enroll"
+            onAction="#handleEnroll"
+            prefWidth="200"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white;
+                   -fx-font-weight: bold; -fx-background-radius: 8; -fx-font-size: 14px;" />
+
+    <!-- Enrolled Courses Section -->
+    <Label text="Courses Enrolled:"
+           style="-fx-font-size: 16px; -fx-text-fill: #333; -fx-padding: 10 0 0 0;" />
+
+    <ListView fx:id="enrolledCoursesList"
+              prefHeight="250" prefWidth="600"
+              style="-fx-border-color: #ccc; -fx-border-radius: 6; -fx-background-radius: 6;" />
+
+
+    <Button text="Unenroll Selected Course"
+            onAction="#handleUnenroll"
+            prefWidth="200"
+            style="-fx-background-color: #f44336; -fx-text-fill: white;
+                   -fx-font-weight: bold; -fx-background-radius: 8;" />
+
+    <Button text="Back to Dashboard"
+            onAction="#handleBackToDashboard"
+            prefWidth="200"
+            style="-fx-background-color: #2196f3; -fx-text-fill: white;
+                   -fx-font-weight: bold; -fx-background-radius: 8;" />
+
+</VBox>

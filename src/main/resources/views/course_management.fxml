@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600" prefWidth="800" spacing="10" stylesheets="@../com/example/learning_management_system/css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learning_management_system.controllers.CourseManagementController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label style="-fx-font-size: 18px;" text="Course Management" />
+
+    <TableView fx:id="courseTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="titleColumn" prefWidth="150" text="Title" />
+            <TableColumn fx:id="durationColumn" prefWidth="100" text="Duration" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="titleField" promptText="Course Title" />
+        <TextField fx:id="durationField" promptText="Duration" />
+    </HBox>
+
+    <TextArea fx:id="descriptionField" prefRowCount="3" promptText="Course Description" />
+
+    <HBox spacing="10">
+        <Button onAction="#handleAddCourse" text="Add Course" />
+        <Button onAction="#handleDeleteCourse" text="Delete Selected" />
+        <Button onAction="#handleUpdateCourse" text="Update Course" />
+        <Button onAction="#handleBackToDashboard" prefWidth="200" text="Back to Dashboard" />
+
+    </HBox>
+
+</VBox>

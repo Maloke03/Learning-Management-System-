@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600" prefWidth="800" spacing="15" style="-fx-background-color: #03fc20;" stylesheets="@../com/example/learning_management_system/css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learning_management_system.controllers.StudentDashboardController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+
+        <MenuBar>
+            <Menu text="File">
+
+                <MenuItem onAction="#handleComments" text="Comments" />
+                <MenuItem text="Logout" onAction="#handleLogout" />
+                <MenuItem text="Exit" onAction="#handleExit" />
+            </Menu>
+
+        </MenuBar>
+
+    <Label style="-fx-font-size: 18px;" text="Welcome to the Learning Management System Student!" />
+
+    <ScrollPane fitToWidth="true">
+        <VBox fx:id="courseContainer" spacing="10">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+        </VBox>
+    </ScrollPane>
+</VBox>

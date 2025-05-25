@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="TOP_LEFT"
+      prefHeight="600" prefWidth="800"
+      spacing="15"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.learning_management_system.controllers.CourseCommentsController"
+      style="-fx-background-color: linear-gradient(to bottom right, #f8f9ff, #eef2ff); -fx-font-family: 'Segoe UI', sans-serif; -fx-padding: 20;">
+
+
+    <Label text="Course Comments"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2e8b57;" />
+
+    <ComboBox fx:id="courseComboBox" promptText="Select Course"
+              prefWidth="400"
+              style="-fx-font-size: 14px; -fx-background-radius: 5; -fx-padding: 6;" />
+
+
+    <ListView fx:id="commentListView" prefHeight="200" prefWidth="550"
+              style="-fx-border-color: #b3d4fc; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
+
+
+    <TextArea fx:id="commentTextArea" promptText="Add your comment..."
+              wrapText="true" prefRowCount="3" prefWidth="550"
+              style="-fx-font-size: 14px; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #ccc;" />
+
+
+    <Button text="Post Comment"
+            onAction="#handlePostComment"
+            prefWidth="180"
+            style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 5;" />
+
+    <Button text="Back to Dashboard"
+            onAction="#handleBack"
+            prefWidth="180"
+            style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 5;" />
+
+</VBox>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600" prefWidth="800"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learning_management_system.controllers.AnalyticsDashboardController"
+            style="-fx-background-color: linear-gradient(to bottom right, #f8f9ff, #eef2ff); -fx-font-family: 'Segoe UI', sans-serif;">
+
+    <!-- Top Menu and Title -->
+    <top>
+        <VBox spacing="5">
+            <MenuBar style="-fx-background-color: linear-gradient(to right, #2e8b57, #3cb371); -fx-effect: dropshadow(gaussian, rgba(0, 100, 0, 0.2), 10, 0, 0, 2);">
+                <Menu text="File" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;">
+                    <MenuItem onAction="#handleExit" text="Exit" />
+                </Menu>
+            </MenuBar>
+            <Label text="Student Progress Analytics"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 10 0 10 20; -fx-text-fill: #2e8b57;" />
+        </VBox>
+    </top>
+
+    <!-- Center Scrollable Data -->
+    <center>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true"
+                    style="-fx-padding: 10; -fx-background-color: transparent;">
+        </ScrollPane>
+    </center>
+
+    <!-- ⬇Bottom with Pagination and Export Buttons -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 10;">
+            <Pagination fx:id="pagination" maxPageIndicatorCount="5" />
+            <HBox alignment="CENTER" spacing="15">
+                <Button text="Export as CSV"
+                        onAction="#handleExportCSV"
+                        style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 16; -fx-background-radius: 5;" />
+                <Button text="Export as PDF"
+                        onAction="#handleExportPDF"
+                        style="-fx-background-color: #2196f3; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 16; -fx-background-radius: 5;" />
+                <Button text="Back to Dashboard"
+                        onAction="#handleBackToDashboard"
+                        style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8 16; -fx-background-radius: 5;" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

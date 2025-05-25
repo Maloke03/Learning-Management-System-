@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600" prefWidth="800"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learning_management_system.controllers.StudentManagementController"
+            style="-fx-background-color: linear-gradient(to bottom right, #eef2ff, #f0f8ff); -fx-font-family: 'Segoe UI', sans-serif;"
+            stylesheets="@../com/example/learning_management_system/css/style.css">
+
+    <!-- Toolbar at the top -->
+    <top>
+        <ToolBar style="-fx-background-color: linear-gradient(to right, #4f46e5, #6366f1);
+                        -fx-padding: 10;
+                        -fx-background-radius: 0 0 10 10;
+                        -fx-effect: dropshadow(three-pass-box, rgba(79, 70, 229, 0.3), 10, 0, 0, 3);">
+            <Button text="Add Student"
+                    onAction="#handleAddStudent"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-background-radius: 8; -fx-padding: 8 16;" />
+
+            <Button text=" Edit Student"
+                    onAction="#handleEditStudent"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-background-radius: 8; -fx-padding: 8 10;" />
+
+            <Button text="Delete Student"
+                    onAction="#handleDeleteStudent"
+                    style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-background-radius: 5; -fx-padding: 8 10;" />
+
+            <Button text="Back to Dashboard"
+                    onAction="#handleBackToDashboard"
+                    style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-background-radius: 8; -fx-padding: 8 10;" />
+        </ToolBar>
+    </top>
+
+    <!-- TableView Center -->
+    <center>
+        <TableView fx:id="studentTable" editable="true"
+                   style="-fx-background-color: white;
+                          -fx-border-color: #c7d2fe;
+                          -fx-border-radius: 8;
+                          -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 5, 0, 0, 3);
+                          -fx-padding: 10;">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" />
+                <TableColumn fx:id="nameColumn" text="Name" />
+                <TableColumn fx:id="progressColumn" text="Progress" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
