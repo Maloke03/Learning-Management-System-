@@ -24,7 +24,7 @@ public class Student {
         return name;
     }
 
-    public StringProperty progressProperty() {  // Added this method
+    public StringProperty progressProperty() {
         return progress;
     }
 
