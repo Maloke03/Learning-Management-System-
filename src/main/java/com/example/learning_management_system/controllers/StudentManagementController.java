@@ -82,12 +82,11 @@ public class StudentManagementController {
 
     @FXML
     private void handleAddStudent(ActionEvent event) {
-        // Add a new student with placeholder values and select it for editing
+
         Student newStudent = new Student(0, "", "0.0");
         studentList.add(newStudent);
         studentTable.getSelectionModel().select(newStudent);
         studentTable.scrollTo(newStudent);
-        // Start editing the name column
         int index = studentList.indexOf(newStudent);
         studentTable.edit(index, nameColumn);
     }
@@ -99,7 +98,7 @@ public class StudentManagementController {
             showAlert("No Student Selected", "Please select a student to edit.");
             return;
         }
-        // Start editing the name column directly in the table
+
         int index = studentList.indexOf(selectedStudent);
         studentTable.edit(index, nameColumn);
     }

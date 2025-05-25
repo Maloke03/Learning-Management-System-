@@ -38,7 +38,7 @@
         </ToolBar>
     </top>
 
-    <!-- TableView Center -->
+
     <center>
         <TableView fx:id="studentTable" editable="true"
                    style="-fx-background-color: white;
