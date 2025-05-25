@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="600" prefWidth="800"
+<BorderPane prefHeight="600" prefWidth="900"
             xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.learning_management_system.controllers.AnalyticsDashboardController"

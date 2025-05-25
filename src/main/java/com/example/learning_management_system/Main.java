@@ -16,7 +16,7 @@ public class Main extends Application {
         // Load initial FXML view
         loadView("/views/login.fxml");
 
-        Scene scene = new Scene(root, 800, 600); // Set preferred size
+        Scene scene = new Scene(root, 900, 600);
         primaryStage.setTitle("Learning Management System");
         primaryStage.setScene(scene);
         primaryStage.show();

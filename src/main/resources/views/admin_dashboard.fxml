@@ -6,7 +6,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="600" prefWidth="800"
+<BorderPane prefHeight="600" prefWidth="900"
             style="-fx-background-image: url('/com/example/learning_management_system/css/background.jpg');
                    -fx-background-size: cover;
                    -fx-background-position: center;

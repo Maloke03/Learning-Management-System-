@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="600" prefWidth="800" spacing="10" stylesheets="@../com/example/learning_management_system/css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learning_management_system.controllers.CourseManagementController">
+<VBox prefHeight="600" prefWidth="900" spacing="10" stylesheets="@../com/example/learning_management_system/css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learning_management_system.controllers.CourseManagementController">
 
     <padding>
         <Insets bottom="20" left="20" right="20" top="20" />

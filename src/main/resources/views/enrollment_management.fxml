@@ -2,7 +2,8 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<VBox alignment="TOP_CENTER" prefHeight="600" prefWidth="800" spacing="20"
+
+<VBox alignment="TOP_CENTER" prefHeight="600" prefWidth="900" spacing="20"
       xmlns="http://javafx.com/javafx/23.0.1"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.learning_management_system.controllers.EnrollmentManagementController"
@@ -28,46 +29,51 @@
     </VBox>
 
     <!-- Enroll Button -->
-    <Button text=" Enroll"
+    <Button text="Enroll"
             onAction="#handleEnroll"
             prefWidth="200"
             style="-fx-background-color: #4CAF50; -fx-text-fill: white;
                    -fx-font-weight: bold; -fx-background-radius: 8; -fx-font-size: 14px;" />
 
-    <!-- Enrolled Courses List -->
+    <!-- Enrolled Courses List (Scrollable) -->
     <VBox spacing="8">
-        <Label text=" Courses Enrolled:"
+        <Label text="Courses Enrolled:"
                style="-fx-font-size: 18px; -fx-text-fill: #333;" />
-        <ListView fx:id="enrolledCoursesList"
-                  prefHeight="200" prefWidth="700"
-                  style="-fx-border-color: #ccc; -fx-border-radius: 6; -fx-background-radius: 6;" />
+
+        <ScrollPane fitToWidth="true" prefHeight="200" maxHeight="300" style="-fx-background-color: transparent;">
+            <ListView fx:id="enrolledCoursesList"
+                      prefHeight="300"
+                      prefWidth="400"
+                      style="-fx-border-color: #ccc; -fx-border-radius: 6; -fx-background-radius: 6;" />
+        </ScrollPane>
     </VBox>
 
     <!-- Student Progress Table -->
     <VBox spacing="8">
-        <Label text=" Student Progress:"
+        <Label text="Student Progress:"
                style="-fx-font-size: 18px; -fx-text-fill: #333;" />
         <TableView fx:id="progressTable" prefWidth="700" style="-fx-background-radius: 6;">
             <columns>
-                <TableColumn fx:id="courseTitleColumn" text=" Course Title" prefWidth="350"/>
-                <TableColumn fx:id="progressColumn" text=" Progress (%)" prefWidth="350"/>
+                <TableColumn fx:id="courseTitleColumn" text="Course Title" prefWidth="350"/>
+                <TableColumn fx:id="progressColumn" text="Progress" prefWidth="300"/>
             </columns>
         </TableView>
+
     </VBox>
 
     <!-- Action Buttons -->
-    <VBox spacing="10">
-        <Button text=" Unenroll  Course"
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Unenroll Course"
                 onAction="#handleUnenroll"
-                prefWidth="250"
+                prefWidth="200"
                 style="-fx-background-color: #f44336; -fx-text-fill: white;
                        -fx-font-weight: bold; -fx-background-radius: 8;" />
 
         <Button text="Back to Dashboard"
                 onAction="#handleBackToDashboard"
-                prefWidth="250"
+                prefWidth="200"
                 style="-fx-background-color: #2196f3; -fx-text-fill: white;
                        -fx-font-weight: bold; -fx-background-radius: 8;" />
-    </VBox>
+    </HBox>
 
 </VBox>
