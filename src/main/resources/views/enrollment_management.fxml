@@ -1,57 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
-<VBox alignment="CENTER" prefHeight="600" prefWidth="800" spacing="15"
+<?import javafx.scene.layout.*?>
+<VBox alignment="TOP_CENTER" prefHeight="600" prefWidth="800" spacing="20"
       xmlns="http://javafx.com/javafx/23.0.1"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.learning_management_system.controllers.EnrollmentManagementController"
       style="-fx-background-color: linear-gradient(to bottom right, #f0f8ff, #e6f7ff);
-             -fx-padding: 20;
+             -fx-padding: 25;
              -fx-font-family: 'Segoe UI', sans-serif;"
       stylesheets="@../com/example/learning_management_system/css/style.css">
 
-
+    <!-- Title -->
     <Label text="Enroll Student in Course"
-           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2e8b57;" />
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2e8b57;" />
 
+    <!-- ComboBoxes -->
+    <VBox spacing="10">
+        <ComboBox fx:id="studentComboBox"
+                  prefWidth="400"
+                  promptText="👤 Select Student"
+                  style="-fx-background-radius: 8; -fx-font-size: 14px;" />
+        <ComboBox fx:id="courseComboBox"
+                  prefWidth="400"
+                  promptText="📚 Select Course"
+                  style="-fx-background-radius: 8; -fx-font-size: 14px;" />
+    </VBox>
 
-    <ComboBox fx:id="studentComboBox"
-              prefWidth="300"
-              promptText="Select Student"
-              style="-fx-background-radius: 8; -fx-font-size: 14px;" />
-
-    <ComboBox fx:id="courseComboBox"
-              prefWidth="300"
-              promptText=" Select Course"
-              style="-fx-background-radius: 8; -fx-font-size: 14px;" />
-
-
+    <!-- Enroll Button -->
     <Button text=" Enroll"
             onAction="#handleEnroll"
             prefWidth="200"
             style="-fx-background-color: #4CAF50; -fx-text-fill: white;
                    -fx-font-weight: bold; -fx-background-radius: 8; -fx-font-size: 14px;" />
 
-    
-    <Label text="Courses Enrolled:"
-           style="-fx-font-size: 16px; -fx-text-fill: #333; -fx-padding: 10 0 0 0;" />
+    <!-- Enrolled Courses List -->
+    <VBox spacing="8">
+        <Label text=" Courses Enrolled:"
+               style="-fx-font-size: 18px; -fx-text-fill: #333;" />
+        <ListView fx:id="enrolledCoursesList"
+                  prefHeight="200" prefWidth="700"
+                  style="-fx-border-color: #ccc; -fx-border-radius: 6; -fx-background-radius: 6;" />
+    </VBox>
 
-    <ListView fx:id="enrolledCoursesList"
-              prefHeight="250" prefWidth="600"
-              style="-fx-border-color: #ccc; -fx-border-radius: 6; -fx-background-radius: 6;" />
+    <!-- Student Progress Table -->
+    <VBox spacing="8">
+        <Label text=" Student Progress:"
+               style="-fx-font-size: 18px; -fx-text-fill: #333;" />
+        <TableView fx:id="progressTable" prefWidth="700" style="-fx-background-radius: 6;">
+            <columns>
+                <TableColumn fx:id="courseTitleColumn" text=" Course Title" prefWidth="350"/>
+                <TableColumn fx:id="progressColumn" text=" Progress (%)" prefWidth="350"/>
+            </columns>
+        </TableView>
+    </VBox>
 
+    <!-- Action Buttons -->
+    <VBox spacing="10">
+        <Button text=" Unenroll  Course"
+                onAction="#handleUnenroll"
+                prefWidth="250"
+                style="-fx-background-color: #f44336; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 8;" />
 
-    <Button text="Unenroll Selected Course"
-            onAction="#handleUnenroll"
-            prefWidth="200"
-            style="-fx-background-color: #f44336; -fx-text-fill: white;
-                   -fx-font-weight: bold; -fx-background-radius: 8;" />
-
-    <Button text="Back to Dashboard"
-            onAction="#handleBackToDashboard"
-            prefWidth="200"
-            style="-fx-background-color: #2196f3; -fx-text-fill: white;
-                   -fx-font-weight: bold; -fx-background-radius: 8;" />
+        <Button text="Back to Dashboard"
+                onAction="#handleBackToDashboard"
+                prefWidth="250"
+                style="-fx-background-color: #2196f3; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 8;" />
+    </VBox>
 
 </VBox>
