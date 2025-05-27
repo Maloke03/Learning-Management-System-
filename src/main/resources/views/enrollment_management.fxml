@@ -20,11 +20,11 @@
     <VBox spacing="10">
         <ComboBox fx:id="studentComboBox"
                   prefWidth="400"
-                  promptText="👤 Select Student"
+                  promptText="Select Student"
                   style="-fx-background-radius: 8; -fx-font-size: 14px;" />
         <ComboBox fx:id="courseComboBox"
                   prefWidth="400"
-                  promptText="📚 Select Course"
+                  promptText="Select Course"
                   style="-fx-background-radius: 8; -fx-font-size: 14px;" />
     </VBox>
 

@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         root = new StackPane();
 
-        // Load initial FXML view
+
         loadView("/views/login.fxml");
 
         Scene scene = new Scene(root, 900, 600);
